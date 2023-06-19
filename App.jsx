@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { View, Text, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './screens/Home';
 
-const {Navigator, Screen} = createNativeStackNavigator();
+const { Navigator, Screen } = createNativeStackNavigator();
 const App = () => {
   return (
     <View style={styles.container}>
@@ -18,7 +18,9 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex: 1
+  },
 });
 
 export default App;
