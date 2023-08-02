@@ -19,7 +19,7 @@ const TextInput = ({
     <View style={styles.container}>
       {label && <Textt style={styles.label} message={label}/>}
       <RNTextInput
-        style={styles.input}
+        style={[style, styles.input]}
         value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}

@@ -49,6 +49,7 @@ export default function Login({ navigation }) {
       <Textt style={styles.textHeaderSmall} message={'Sign in to your Account'} />
       <View style={styles.viewii}>
         <TextInput
+        style={styles.inputField}
           label="Email"
           value={email}
           onChangeText={(text) => setEmail(text)}
@@ -56,6 +57,7 @@ export default function Login({ navigation }) {
           required
         />
         <TextInput
+          style={styles.inputField}
           label="Password"
           value={password}
           placeholder="Enter your password"

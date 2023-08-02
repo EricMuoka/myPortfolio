@@ -24,15 +24,10 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   inputField: {
-    borderWidth: 1,
     borderColor: '#ccc',
-    borderRadius: 5,
-    paddingVertical: 12,
-    paddingHorizontal: 15,
-    fontSize: 16,
+    fontSize: 26,
     color: '#333',
-    marginBottom: 15,
-    width: '100%',
+    marginBottom: 5,
   },
   forgotPasswordText: {
     fontSize: 14,
