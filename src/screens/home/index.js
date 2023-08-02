@@ -2,20 +2,19 @@ import React from 'react';
 import {
   View,
   Text,
-  StyleSheet,
   TextInput,
   Dimensions,
   TouchableOpacity,
-  ScrollView,
 } from 'react-native';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Categories from '../components/Categories';
-import Menu from '../components/Menu';
+import Categories from '../../components/Categories';
+import Menu from '../../components/Menu';
+import styles from './style';
 
 const dimension = Dimensions.get('screen');
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View
@@ -110,13 +109,5 @@ const Home = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 25,
-    backgroundColor: '#FFFFFF',
-  },
-});
 
 export default Home;
