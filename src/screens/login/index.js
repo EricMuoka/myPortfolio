@@ -51,16 +51,16 @@ export default function Login({ navigation }) {
         <TextInput
           label="Email"
           value={email}
-          onChangeText={handleEmailChange}
+          onChangeText={(text) => setEmail(text)}
           placeholder="Enter your email"
           required
         />
         <TextInput
           label="Password"
           value={password}
-          onChangeText={handlePasswordChange}
           placeholder="Enter your password"
           required
+          onChangeText={(text) => setPassword(text)}
         />
         <TouchableOpacity style={styles.item} onPress={handleForgotPassword}>
           <Textt style={styles.forgotPasswordLink} message={'Forgot Password?'}/>

@@ -5,8 +5,7 @@ const styles = StyleSheet.create({
         marginVertical: 10,
       },
       label: {
-        fontSize: 16,
-        fontWeight: 'bold',
+        fontSize: 14,
         marginBottom: 5,
       },
       input: {
