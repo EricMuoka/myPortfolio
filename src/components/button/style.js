@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
       textAlign: 'center',
-      padding: 20,
+      padding: 15,
       color: '#fff',
     },
   });

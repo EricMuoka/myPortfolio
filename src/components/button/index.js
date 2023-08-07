@@ -2,6 +2,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import Textt from '../text';
 import styles from "./style";
+import { isTypeAssertionExpression } from 'typescript';
 
 
 /**
@@ -19,14 +20,14 @@ import styles from "./style";
  */
 export default function Button({ title, buttonStyle, textStyle, onPress, disabled }) {
     return (
-        <TouchableOpacity onPress={onPress} style={[styles.defaultButton, buttonStyle,]} 
+        <TouchableOpacity onPress={onPress} style={[ buttonStyle, textStyle ]} 
           disabled={disabled}
         >
-            <Textt 
-              message={title}
-              style={[textStyle, styles.buttonText, disabled && styles.disabled]}
-              onPress={onPress}
-            />
+          <Textt 
+            message={title}
+            texttStyle={[textStyle, styles.buttonText, disabled && styles.disabled]}
+            onPress={onPress}
+          />
         </TouchableOpacity>
     )
 }
