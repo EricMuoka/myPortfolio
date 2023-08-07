@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
-import Button from '../../components/button/index';
+import {Button, Textt, TextInput} from '../../components/index';
 import Strings from '../../services/localization';
-import Textt from '../../components/text/index';
 import styles from './style';
-import TextInput from '../../components/textInput';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import LinearGradient from 'react-native-linear-gradient';
 

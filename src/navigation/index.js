@@ -1,17 +1,14 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Home from '../screens/home/index';
-import Signup from '../screens/signup';
-import Login from '../screens/login/index.js';
-import Passwordrecovery from '../screens/passwordrecovery';
+import {Login, Home, Signup, Passwordrecovery} from '../screens/index';
 
 const Stack = createNativeStackNavigator();
 
 export default function Navigation () {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false,}} initialRouteName="Login">
+      <Stack.Navigator screenOptions={{headerShown: false,}} initialRouteName="Signup">
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='Home' component={Home} />
         <Stack.Screen name='Signup' component={Signup} />
