@@ -20,14 +20,14 @@ import { isTypeAssertionExpression } from 'typescript';
  */
 export default function Button({ title, buttonStyle, textStyle, onPress, disabled }) {
     return (
-        <TouchableOpacity onPress={onPress} style={[ buttonStyle, textStyle ]} 
-          disabled={disabled}
-        >
-          <Textt 
-            message={title}
-            texttStyle={[textStyle, styles.buttonText, disabled && styles.disabled]}
-            onPress={onPress}
-          />
-        </TouchableOpacity>
-    )
+    <TouchableOpacity onPress={onPress} style={[ buttonStyle, textStyle ]} 
+      disabled={disabled}
+    >
+      <Textt 
+        message={title}
+        texttStyle={[textStyle, styles.buttonText, disabled && styles.disabled]}
+        onPress={onPress}
+      />
+    </TouchableOpacity>
+  )
 }

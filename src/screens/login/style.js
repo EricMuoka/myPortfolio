@@ -48,11 +48,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginBottom: 15,
   },
-  loginButtonText: {
-    color: '#333333',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
   textContainer: {
     flexDirection: 'row', 
     alignItems: 'center',

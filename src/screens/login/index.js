@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TouchableOpacity, Text } from 'react-native';
+import { View, TouchableOpacity, Text, StatusBar } from 'react-native';
 import {Button, Textt, TextInput} from '../../components/index';
 import Strings from '../../services/localization';
 import styles from './style';
@@ -36,13 +36,14 @@ export default function Login({ navigation }) {
       colors={['#000033', '#000080']} // Start from very dark blue (#000033) to dark blue (#000080)
       style={styles.container}
     >
+      <StatusBar backgroundColor="#000033" barStyle="light-content" />
       <View style={styles.viewi}>
         <Textt texttStyle={styles.textHeader} message={Strings.login} />
          <Textt texttStyle={styles.textHeaderSmall} message={Strings.login} />
       </View>
       <View style={styles.viewii}>
         <TextInput
-        style={styles.inputField}
+          style={styles.inputField}
           label="Email"
           defaultValue={email}
           onChangeText={(text) => setEmail(text)}
