@@ -14,7 +14,7 @@ import styles from './style';
 
 const dimension = Dimensions.get('screen');
 
-const Home = ({ navigation }) => {
+export default function Home ({ navigation }) {
   return (
     <View style={styles.container}>
       <View
@@ -109,5 +109,3 @@ const Home = ({ navigation }) => {
     </View>
   );
 };
-
-export default Home;

@@ -50,7 +50,7 @@ export default function Myprofile ({navigation}){
                         <EvilIcons name="chevron-right" size={35} color="#000"/>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Appinfo', {name: 'Appinfo'})}>
                     <View style={styles.iconView}>
                         <Feather name="smartphone" size={20} color="#000" />
                         <Textt texttStyle={styles.iconText} message={'App Information'}/>

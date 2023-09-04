@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
     iconView: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingLeft: 15,
-        paddingRight: 15,
+        marginLeft: 15,
+        marginRight: 15,
         marginTop: 30
     },
     iconText: {

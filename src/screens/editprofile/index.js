@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {View, Image, TouchableOpacity, Text, TextInput as RNTextInput} from 'react-native';
 import {Button, Textt} from '../../components/index';
 import styles from './style';
+import { useNavigation } from '@react-navigation/native';
+import ImagePicker from 'react-native-image-picker';
 
 export default function Editprofile ({navigation}) {
     const [userDetails, setUserDetails] = useState({
@@ -14,17 +16,51 @@ export default function Editprofile ({navigation}) {
         profileImage: null,
     });
 
-    const handleDateChange = () => {
+    const openImagePicker = () => {
+        const options = {
+            title: 'Select image',
+            storageOptions: {
+                skipBackup: true,
+                path: 'images',
+            },
+        };
 
-    }
-    
-    const handleImageUpload = () => {
-    // Implement image upload logic here
-    // For simplicity, you can use a placeholder image initially
-    setUserDetails({
-        ...userDetails,
-        // Replace with the actual image path
-    });
+        ImagePicker.showImagePicker(options, response => {
+            if (response.didCancel) {
+                console.log('User cancelled image picker');
+            } else if (response.error) {
+                console.log('ImagePicker Error: ', response.error);
+            } else {
+                const source = response.uri;
+            }
+        });
+    };
+
+    const uploadImage = async source => {
+        // Implement image upload logic here
+        // For simplicity, you can use a placeholder image initially
+        const formData = new FormData();
+        formData.append('image', {
+            uri: source,
+            type: 'image/jpeg',
+            name: 'image.jpg',
+        });
+        
+        try {
+            const response = await axios.post('Your_Upload_URL', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            console.log('Image uploaded successfully', response.data);
+        } catch (error) {
+            console.log('Image upload error', error);
+        }
+
+        setUserDetails({
+            ...userDetails,
+            // Replace with the actual image path
+        });
     };
     
     return (
@@ -37,7 +73,7 @@ export default function Editprofile ({navigation}) {
                     source={require('../../assets/eric.jpg')}
                     style={styles.profileImage}
                 />
-                <TouchableOpacity onPress={handleImageUpload}>
+                <TouchableOpacity onPress={openImagePicker}>
                     <Text style={styles.uploadButtonText}>Upload photo +</Text>
                 </TouchableOpacity>
             </View>
@@ -97,7 +133,7 @@ export default function Editprofile ({navigation}) {
                 <Button
                     title={'Save'}
                     buttonStyle={styles.saveButton}
-                    onPress={() => navigation.navigate('Myprofile', {name: 'Myprofile'})}
+                    onPress={() =>  navigation.navigate('Profile')}
                 />
             </View>
         </View>
