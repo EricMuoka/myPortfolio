@@ -4,12 +4,12 @@ import Clothing from './Clothing';
 import Electronics from './Electronics';
 import Household from './Household';
 
-const Menu = () => {
+const Menu = ({navigation}) => {
   return (
     <ScrollView showsVerticalScrollIndicator={false} style={{}}>
-      <Electronics />
-      <Clothing />
-      <Household />
+      <Electronics navigation={navigation} />
+      <Clothing navigation={navigation} />
+      <Household navigation={navigation} />
     </ScrollView>
   );
 };

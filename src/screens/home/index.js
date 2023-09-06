@@ -14,7 +14,7 @@ import styles from './style';
 
 const dimension = Dimensions.get('screen');
 
-export default function Home ({ navigation }) {
+export default function Home({navigation}) {
   return (
     <View style={styles.container}>
       <View
@@ -105,7 +105,7 @@ export default function Home ({ navigation }) {
       <View>
         <Categories />
       </View>
-      <Menu />
+      <Menu navigation={navigation} />
     </View>
   );
-};
+}
