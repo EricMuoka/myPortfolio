@@ -26,7 +26,7 @@ export default function Home({navigation}) {
           paddingVertical: 10,
         }}>
         <View>
-          <Text style={{color: '#333333', fontSize: 25, fontWeight: '500'}}>
+          <Text style={{color: '#568746', fontSize: 25, fontWeight: '500'}}>
             Discover
           </Text>
         </View>
@@ -81,6 +81,7 @@ export default function Home({navigation}) {
         <View style={{width: dimension.width * (75 / 100)}}>
           <TextInput
             placeholder="search..."
+            placeholderTextColor={'#000'}
             style={{
               borderRadius: 17,
               fontSize: 20,

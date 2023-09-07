@@ -22,14 +22,14 @@ const Categories = () => {
           <TouchableOpacity key={item.name}>
             <View
               style={{
-                //backgroundColor: '#568746',
+                backgroundColor: '#568746',
                 padding: 15,
                 borderWidth: 0.5,
                 borderRadius: 13,
                 borderColor: 'gray',
                 marginHorizontal: 5,
               }}>
-              <Text style={{fontWeight: '500', fontSize: 15, color: 'gray'}}>
+              <Text style={{fontWeight: '500', fontSize: 15, color: '#fff'}}>
                 {item.name}
               </Text>
             </View>

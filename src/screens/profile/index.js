@@ -31,37 +31,37 @@ export default function Myprofile ({navigation}){
                 </View>
                 <TouchableOpacity onPress={() => navigation.navigate('Editprofile', {name: 'Editprofile'})}>
                     <View style={styles.iconView}>
-                        <EvilIcons name="pencil" size={35} color="#000"/>
+                        <EvilIcons name="pencil" size={35} color="#568746"/>
                         <Textt texttStyle={styles.iconText} message={'Edit Profile'}/>
-                        <EvilIcons name="chevron-right" size={35} color="#000"/>
+                        <EvilIcons name="chevron-right" size={35} color="#568746"/>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity>
                     <View style={styles.iconView}>
-                        <EvilIcons name="lock" size={35} color="#000"/>
+                        <EvilIcons name="lock" size={35} color="#568746"/>
                         <Textt texttStyle={styles.iconText} message={'Change password'}/>
-                        <EvilIcons name="chevron-right" size={35} color="#000"/>
+                        <EvilIcons name="chevron-right" size={35} color="#568746"/>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity>
                     <View style={styles.iconView}>
-                        <EvilIcons name="location" size={35} color="#000"/> 
+                        <EvilIcons name="location" size={35} color="#568746"/> 
                         <Textt texttStyle={styles.iconText} message={'Change location'}/>
-                        <EvilIcons name="chevron-right" size={35} color="#000"/>
+                        <EvilIcons name="chevron-right" size={35} color="#568746"/>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('Appinfo', {name: 'Appinfo'})}>
                     <View style={styles.iconView}>
-                        <Feather name="smartphone" size={20} color="#000" />
+                        <Feather name="smartphone" size={20} color="#568746" />
                         <Textt texttStyle={styles.iconText} message={'App Information'}/>
-                        <EvilIcons name="chevron-right" size={35} color="#000"/>
+                        <EvilIcons name="chevron-right" size={35} color="#568746"/>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity>
                     <View style={styles.iconView}>
-                        <Feather name="log-out" size={20} color="#000" />
+                        <Feather name="log-out" size={20} color="#568746" />
                         <Textt texttStyle={styles.iconText} message={'Log out'}/>
-                        <EvilIcons name="chevron-right" size={35} color="#000"/>
+                        <EvilIcons name="chevron-right" size={35} color="#568746"/>
                     </View>
                 </TouchableOpacity>
             </View>
