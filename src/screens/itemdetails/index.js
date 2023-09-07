@@ -60,7 +60,7 @@ const ItemDetails = ({navigation, route}) => {
           <Text style={{fontSize: 25, color: 'black', fontWeight: 'bold'}}>
             {data.cost}
           </Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Checkout')}>
             <View
               style={{
                 display: 'flex',
