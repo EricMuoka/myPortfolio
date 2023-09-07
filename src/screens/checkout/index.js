@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import styles from './styles';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Shipping from '../../components/shipping/Shipping';
-import Payment from '../../components/payment/Payment';
-import Review from '../../components/review/Review';
-import Success from '../../components/success/Success';
+import Shipping from '../../components/shipping';
+import Payment from '../../components/payment';
+import Review from '../../components/review';
+import Success from '../../components/success';
 
 const Checkout = () => {
   const [showShipping, setShowShipping] = useState(true);

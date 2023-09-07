@@ -8,6 +8,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Myprofile} from '../screens';
+import Cart from '../screens/cart';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,7 +17,7 @@ export default function HomeRoute() {
     <Tab.Navigator
       screenOptions={{
         tabBarStyle: {
-          backgroundColor: '#568746',
+          backgroundColor: '#fff',
         },
         activeTintColor: '#fff',
       }}>
@@ -25,9 +26,9 @@ export default function HomeRoute() {
         component={Home}
         options={{
           headerShown: false,
-          tabBarIcon: () => <Fontisto name={'home'} size={24} color={'#fff'} />,
+          tabBarIcon: () => <Fontisto name={'home'} size={24} color={'#568746'} />,
           tabBarLabelStyle: {
-            color: '#fff',
+            color: '#568746',
           },
         }}
       />
@@ -37,23 +38,23 @@ export default function HomeRoute() {
         options={{
           headerShown: false,
           tabBarIcon: () => (
-            <AntDesign name={'wallet'} size={24} color={'#fff'} />
+            <AntDesign name={'wallet'} size={24} color={'#568746'} />
           ),
           tabBarLabelStyle: {
-            color: '#fff',
+            color: '#568746',
           },
         }}
       />
       <Tab.Screen
         name={'Cart'}
-        component={Home}
+        component={Cart}
         options={{
           headerShown: false,
           tabBarIcon: () => (
-            <Entypo name={'shopping-cart'} size={24} color={'#fff'} />
+            <Entypo name={'shopping-cart'} size={24} color={'#568746'} />
           ),
           tabBarLabelStyle: {
-            color: '#fff',
+            color: '#568746',
           },
         }}
       />
@@ -63,10 +64,10 @@ export default function HomeRoute() {
         options={{
           headerShown: false,
           tabBarIcon: () => (
-            <Ionicons name={'person-outline'} size={24} color={'#fff'} />
+            <Ionicons name={'person-outline'} size={24} color={'#568746'} />
           ),
           tabBarLabelStyle: {
-            color: '#fff',
+            color: '#568746',
           },
         }}
       />
