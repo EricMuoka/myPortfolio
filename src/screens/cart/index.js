@@ -8,8 +8,8 @@ import styles from "./style";
 export default function Cart({navigation}) {
     const [data, setData] = useState(cartItems);
 
-    const signup = () => {
-        navigation.navigate('Signup2', {name: 'Signup2'}) 
+    const checkout = () => {
+        navigation.navigate('Checkout', {name: 'Checkout'}) 
     }
 
    // const renderItem = ({ item }) => (
@@ -66,6 +66,19 @@ export default function Cart({navigation}) {
                 <ScrollView>
                     <CartItem />
                 </ScrollView>
+            </View>
+            <View style={styles.subTotalView}>
+                <Text style={styles.text1}>Subtotal:</Text>
+                <Text style={styles.text2}>$1060.00</Text>
+            </View>
+            <View style={styles.subTotalView}>
+                <Text style={styles.text1}>Delivery fee:</Text>
+                <Text style={styles.text2}>$5.00</Text>
+            </View>
+            <View style={styles.buttonView}>
+                <TouchableOpacity style={styles.checkoutButton} onPress={checkout}>
+                    <Text style={styles.buttonText}>Proceed to checkout</Text>
+                </TouchableOpacity>
             </View>
         </View>
     );

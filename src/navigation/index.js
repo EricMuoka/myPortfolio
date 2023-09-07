@@ -10,6 +10,7 @@ import {
   Passwordrecovery,
   Appinfo,
   ItemDetails,
+  Checkout,
 } from '../screens/index';
 
 import HomeRoute from './home.route';
@@ -29,6 +30,7 @@ export default function Navigation() {
         <Stack.Screen name="Editprofile" component={Editprofile} />
         <Stack.Screen name="Appinfo" component={Appinfo} />
         <Stack.Screen name="ItemDetails" component={ItemDetails} />
+        <Stack.Screen name="Checkout" component={Checkout} />
       </Stack.Navigator>
     </NavigationContainer>
   );

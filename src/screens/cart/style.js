@@ -65,6 +65,38 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         marginRight: 20,
     },
+    subTotalView: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingLeft: 20,
+        paddingRight: 20,
+        marginBottom: 10,
+    },
+    text1: {
+        color: '#333333',
+        fontWeight: 'bold',
+        fontSize: 15,
+    },
+    text2: {
+        color: '#000',
+        fontWeight: 'bold',
+        fontSize: 20,
+    },
+    buttonView: {
+       // backgroundColor: 'grey'
+    },
+    checkoutButton: {
+        backgroundColor: '#568746',
+        paddingVertical: 15,
+        borderRadius: 15,
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: 10,
+    },
+    buttonText: {
+        color: '#fff',
+        fontWeight: 'bold',
+    },
 
 });
 
