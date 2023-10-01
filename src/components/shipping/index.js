@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {useMemo, useState} from 'react';
 import styles from './styles';
 import {Button, Text, View, TextInput, TouchableOpacity} from 'react-native';
-
+import RadioGroup from 'react-native-radio-buttons-group';
 const Shipping = ({setShowShipping, setShowPayment}) => {
   const showPayment = () => {
     setShowShipping(false);
     setShowPayment(true);
   };
+
   return (
     <View style={styles.container}>
       <Text
