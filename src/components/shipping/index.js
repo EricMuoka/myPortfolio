@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles';
-import {Button, Text, View, TextInput} from 'react-native';
+import {Button, Text, View, TextInput, TouchableOpacity} from 'react-native';
 
 const Shipping = ({setShowShipping, setShowPayment}) => {
   const showPayment = () => {
@@ -42,7 +42,9 @@ const Shipping = ({setShowShipping, setShowPayment}) => {
           style={styles.inputField}
         />
       </View>
-      <Button title="Continue to Payment" onPress={() => showPayment()} />
+      <TouchableOpacity style={styles.button} onPress={() => showPayment()}>
+        <Text style={styles.buttonText}>Continue to Payment</Text>
+      </TouchableOpacity>
     </View>
   );
 };
