@@ -6,11 +6,20 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
+import { connect } from 'react-redux';
+import { AddToCart } from '../../redux/cart/actions';
 import styles from './styles';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const ItemDetails = ({navigation, route}) => {
+const ItemDetails = ({navigation, route, addToCart}) => {
+
   const {data} = route.params;
+
+  const handleAddToCart = () => {
+    console.log(data);
+    addToCart(data); // Dispatch the AddToCart action with the selected data
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.top}>
@@ -60,7 +69,7 @@ const ItemDetails = ({navigation, route}) => {
           <Text style={{fontSize: 25, color: 'black', fontWeight: 'bold'}}>
             {data.cost}
           </Text>
-          <TouchableOpacity onPress={() => navigation.navigate('Cart')}>
+          <TouchableOpacity onPress={handleAddToCart}>
             <View
               style={{
                 display: 'flex',
@@ -81,4 +90,8 @@ const ItemDetails = ({navigation, route}) => {
   );
 };
 
-export default ItemDetails;
+const mapDispatchToProps = (dispatch) => ({
+  addToCart: (item) => dispatch(AddToCart(item)),
+});
+
+export default connect(null, mapDispatchToProps)(ItemDetails);

@@ -16,7 +16,7 @@ export default function Myprofile ({navigation}){
 
     return(
         <View style={styles.container}>
-            <StatusBar backgroundColor="#fff"  barStyle="dark-content" />
+            <StatusBar backgroundColor="#568746" barStyle="light-content" />
             <View style={styles.text}>
                 <Textt texttStyle={styles.textHeader} message={'My Profile'}/>
             </View>

@@ -1,14 +1,10 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Home from '../screens/home';
-import Profile from '../screens/profile';
 import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {Myprofile} from '../screens';
-import Cart from '../screens/cart';
+import {Myprofile, Favourites, Home, Cart} from '../screens';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,12 +29,12 @@ export default function HomeRoute() {
         }}
       />
       <Tab.Screen
-        name={'Wallet'}
-        component={Home}
+        name={'favourites'}
+        component={Favourites}
         options={{
           headerShown: false,
           tabBarIcon: () => (
-            <AntDesign name={'wallet'} size={24} color={'#568746'} />
+            <AntDesign name={'hearto'} size={24} color={'#568746'} />
           ),
           tabBarLabelStyle: {
             color: '#568746',

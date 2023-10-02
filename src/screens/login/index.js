@@ -36,7 +36,7 @@ export default function Login({ navigation }) {
       colors={['#000033', '#000080']} // Start from very dark blue (#000033) to dark blue (#000080)
       style={styles.container}
     >
-      <StatusBar backgroundColor="#000033" barStyle="light-content" />
+      <StatusBar backgroundColor="#568746" barStyle="light-content" />
       <View style={styles.viewi}>
         <Textt texttStyle={styles.textHeader} message={Strings.login} />
          <Textt texttStyle={styles.textHeaderSmall} message={Strings.login} />

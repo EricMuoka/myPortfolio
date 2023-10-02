@@ -1,58 +1,19 @@
 import React, {useState} from "react";
-import {View, StatusBar, Button, Text, ScrollView, TouchableOpacity, FlatList} from "react-native";
+import {View, StatusBar, Button, Text, ScrollView, TouchableOpacity} from "react-native";
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import CartItem from "../../components/cartItem";
 import styles from "./style";
 
 export default function Cart({navigation}) {
-    const [data, setData] = useState(cartItems);
 
     const checkout = () => {
         navigation.navigate('Checkout', {name: 'Checkout'}) 
     }
 
-   // const renderItem = ({ item }) => (
-   //     <CartItem />
-   // );
-   const Item = ({name}) => (
-        <CartItem />
-    );
-
-    const cartItems = [
-        {
-            id: '1',
-            name: 'Macbook"',
-            price: '$900.00',
-            color: 'silver',
-            imgSrc: require('../../assets/macbook.jpeg'),
-
-        },
-        {
-            id: '2',
-            name: 'Clothing',
-            color: 'brown',
-            price: '$90.00',
-            imgSrc: require('../../assets/cloth.jpeg'),
-        },
-        {
-            id: '3',
-            name: 'Ram',
-            color: 'green',
-            price: '$70.00',
-            imgSrc: require('../../assets/ram.jpeg'),
-        },
-    ];
-
-    const handleRemoveItem = (itemId) => {
-        // Filter out the item with the specified itemId
-        const updatedData = data.filter(item => item.id !== itemId);
-        setData(updatedData);
-    };
-
     return(
         <View style={styles.container}>
-            <StatusBar backgroundColor="#f0f0f0" barStyle="dark-content" />
+            <StatusBar backgroundColor="#568746" barStyle="light-content" />
             <View style={styles.header}>
                 <View style={styles.chevron}>
                     <EvilIcons name="chevron-left" size={35} color="#000"/>
@@ -63,9 +24,7 @@ export default function Cart({navigation}) {
                 </View>
             </View>
             <View>
-                <ScrollView>
-                    <CartItem />
-                </ScrollView>
+                <CartItem /> 
             </View>
             <View style={styles.subTotalView}>
                 <Text style={styles.text1}>Subtotal:</Text>

@@ -5,6 +5,7 @@ import {
   TextInput,
   Dimensions,
   TouchableOpacity,
+  StatusBar
 } from 'react-native';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -17,6 +18,7 @@ const dimension = Dimensions.get('screen');
 export default function Home({navigation}) {
   return (
     <View style={styles.container}>
+      <StatusBar backgroundColor="#568746" barStyle="light-content" />
       <View
         style={{
           display: 'flex',

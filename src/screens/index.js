@@ -7,3 +7,5 @@ export {default as Appinfo} from './appInfo';
 export {default as Passwordrecovery} from './passwordrecovery';
 export {default as ItemDetails} from './itemdetails';
 export {default as Checkout} from './checkout';
+export {default as Favourites} from './favourites';
+export {default as Cart} from './cart';

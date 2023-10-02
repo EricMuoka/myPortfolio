@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   viewi: {
     paddingTop: 70,
     padding: 30,
-    backgroundColor: '#000033',
+    backgroundColor: '#568746',
   },
   viewii: {
     backgroundColor: '#fff',
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   textHeaderSmall: {
     fontSize: 16,
-    color: 'gray',
+    color: '#F0f0f0',
     marginRight: 100,
   },
   button: {
