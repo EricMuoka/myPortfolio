@@ -11,6 +11,13 @@ import {
   Appinfo,
   ItemDetails,
   Checkout,
+  Rough,
+  Weather,
+  Timers,
+  Portfolio,
+  ImageFeed, 
+  MessagingApp,
+  Contacts,
 } from '../screens/index';
 
 import HomeRoute from './home.route';
@@ -22,7 +29,7 @@ export default function Navigation() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName="Signup">
+        initialRouteName="Portfolio">
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Home" component={HomeRoute} />
         <Stack.Screen name="Signup" component={Signup} />
@@ -31,6 +38,13 @@ export default function Navigation() {
         <Stack.Screen name="Appinfo" component={Appinfo} />
         <Stack.Screen name="ItemDetails" component={ItemDetails} />
         <Stack.Screen name="Checkout" component={Checkout} />
+        <Stack.Screen name="Rough" component={Rough} />
+        <Stack.Screen name="Weather" component={Weather} />
+        <Stack.Screen name="Timers" component={Timers} />
+        <Stack.Screen name="Portfolio" component={Portfolio} />
+        <Stack.Screen name="ImageFeed" component={ImageFeed} />
+        <Stack.Screen name="MessagingApp" component={MessagingApp} />
+        <Stack.Screen name="Contacts" component={Contacts} />
       </Stack.Navigator>
     </NavigationContainer>
   );

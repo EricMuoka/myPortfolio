@@ -13,13 +13,13 @@ const TextInput = ({
   secureTextEntry,
   disabled,
   required,
-  placeholderTextColor
+  placeholderTextColor,
 }) => {
   return (
     <View style={styles.container}>
       {label && <Textt style={styles.label} message={label}/>}
       <RNTextInput
-        style={[style, styles.input]}
+        style={[style,]}
         value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}

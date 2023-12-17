@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, TouchableOpacity, StatusBar}  from 'react-native';
+import {View, TouchableOpacity, StatusBar,}  from 'react-native';
 import Textt from '../../components/text';
 import styles from './style';
 import Button from '../../components/button/index';

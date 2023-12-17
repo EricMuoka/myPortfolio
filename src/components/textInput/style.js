@@ -8,13 +8,6 @@ const styles = StyleSheet.create({
         fontSize: 14,
         marginBottom: 5,
       },
-      input: {
-        borderWidth: 1,
-        borderColor: '#ccc',
-        borderRadius: 5,
-        padding: 10,
-        fontSize: 16,
-      },
 })
 
 export default styles;

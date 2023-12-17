@@ -36,14 +36,14 @@ export default function Myprofile ({navigation}){
                         <EvilIcons name="chevron-right" size={35} color="#568746"/>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Timer', {name: 'Timer'})}>
                     <View style={styles.iconView}>
                         <EvilIcons name="lock" size={35} color="#568746"/>
                         <Textt texttStyle={styles.iconText} message={'Change password'}/>
                         <EvilIcons name="chevron-right" size={35} color="#568746"/>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Weather', {name: 'Weather'})}> 
                     <View style={styles.iconView}>
                         <EvilIcons name="location" size={35} color="#568746"/> 
                         <Textt texttStyle={styles.iconText} message={'Change location'}/>
